@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import MyHello from './MyHello';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -9,7 +10,7 @@ const str = 'おはようございます<br />さようなら'
 root.render(
   <React.StrictMode>
     {/* <App /> */}
-    <p dangerouslySetInnerHTML={{__html: str}}/>
+    <MyHello name="山田" />
   </React.StrictMode>
 );  
 
