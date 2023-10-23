@@ -5,14 +5,13 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-setInterval(() => {
-  root.render(
-    <React.StrictMode>
-      {/* <App /> */}
-      <div>現在時刻は、{(new Date()).toLocaleString('ja')}です。</div>
-    </React.StrictMode>
-  );  
-}, 1000)
+const str = 'おはようございます<br />さようなら'
+root.render(
+  <React.StrictMode>
+    {/* <App /> */}
+    <p dangerouslySetInnerHTML={{__html: str}}/>
+  </React.StrictMode>
+);  
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
