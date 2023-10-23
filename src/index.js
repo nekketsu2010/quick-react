@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import MyAttrMulti from './MyAttrMulti';
+import MyHelloContent from './MyHelloContent';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -14,7 +14,9 @@ const data = {
 root.render(
   <div>
     {/* <App /> */}
-    <MyAttrMulti {...data} />
+    <MyHelloContent>
+      <b>山田</b>
+    </MyHelloContent>
     
   </div>
 );  
