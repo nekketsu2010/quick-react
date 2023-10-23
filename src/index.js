@@ -1,16 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import MyBook from './MyBook';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-const str = 'おはようございます<br />さようなら'
+const book = {
+  isbn: 'WGS-JST-002',
+  title: '速習webpack 第2版',
+  price: 500,
+  published: 'WINGSプロジェクト',
+};
+
 root.render(
-  <React.StrictMode>
+  <div>
     {/* <App /> */}
-    <p dangerouslySetInnerHTML={{__html: str}}/>
-  </React.StrictMode>
+    <MyBook info={book} />
+  </div>
 );  
 
 // If you want to start measuring performance in your app, pass a function
