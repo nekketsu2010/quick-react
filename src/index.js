@@ -1,21 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import MyType from './MyType';
+import MyAttrMulti from './MyAttrMulti';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-const str = 'おはようございます<br />さようなら'
+const data = {
+  name: '近松門左衛門',
+  age: 18,
+  sex: '男',
+};
+
 root.render(
   <div>
     {/* <App /> */}
-    <MyType value="山田" />
-    <MyType value={ '鈴木' } />
-    <MyType value={ 108 } />
-    <MyType value={ true } />
-    <MyType value={ ['うめ', 'もも', 'さくら'] } />
-    <MyType value={ {name:"山田太郎", age:40} } />
-    <MyType value={ () => console.log('Hoge') }  />
+    <MyAttrMulti {...data} />
     
   </div>
 );  
