@@ -1,17 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import MyHello from './MyHello';
+import MyType from './MyType';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const str = 'おはようございます<br />さようなら'
 root.render(
-  <React.StrictMode>
+  <div>
     {/* <App /> */}
-    <MyHello name="山田" />
-  </React.StrictMode>
+    <MyType value="山田" />
+    <MyType value={ '鈴木' } />
+    <MyType value={ 108 } />
+    <MyType value={ true } />
+    <MyType value={ ['うめ', 'もも', 'さくら'] } />
+    <MyType value={ {name:"山田太郎", age:40} } />
+    <MyType value={ () => console.log('Hoge') }  />
+    
+  </div>
 );  
 
 // If you want to start measuring performance in your app, pass a function
