@@ -1,23 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import MyHelloContent from './MyHelloContent';
+import MyBook from './MyBook';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-const data = {
-  name: '近松門左衛門',
-  age: 18,
-  sex: '男',
+const book = {
+  isbn: 'WGS-JST-002',
+  title: '速習webpack 第2版',
+  price: 500,
+  published: 'WINGSプロジェクト',
 };
 
 root.render(
   <div>
     {/* <App /> */}
-    <MyHelloContent>
-      <b>山田</b>
-    </MyHelloContent>
-    
+    <MyBook info={book} />
   </div>
 );  
 
