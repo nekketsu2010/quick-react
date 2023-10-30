@@ -1,22 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import MyBook from './MyBook';
 import reportWebVitals from './reportWebVitals';
+import MyArticle from './MyArticle';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-const book = {
-  isbn: 'WGS-JST-002',
-  title: '速習webpack 第2版',
-  price: 500,
-  published: 'WINGSプロジェクト',
-};
+const articles = [
+  {
+    url: 'https://www.atmarkit.co.jp/alt/series/9383/',
+    title: 'ECMAScriptで学ぶ正規表現',
+    description: '正規表現の基本とECMAScript...',
+    isNew: true,
+  }
+]
 
 root.render(
-  <div>
-    {/* <App /> */}
-    <MyBook info={book} />
-  </div>
+  <dl>
+    {articles.map((article) => 
+      <MyArticle {...article} />
+    )}
+  </dl>
 );  
 
 // If you want to start measuring performance in your app, pass a function
