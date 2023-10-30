@@ -17,7 +17,7 @@ const articles = [
 root.render(
   <dl>
     {articles.map((article) => 
-      <MyArticle {...article} />
+      <MyArticle {...article} key={article.url} />
     )}
   </dl>
 );  
