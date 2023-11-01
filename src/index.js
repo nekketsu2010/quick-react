@@ -40,8 +40,8 @@ const articles = [
 
 root.render(
   <dl>
-    {articles.map((article) => 
-      <MyArticle {...article} key={article.url} />
+    {articles.map((article, index) => 
+      <MyArticle {...article} key={index} />
     )}
   </dl>
 );  
