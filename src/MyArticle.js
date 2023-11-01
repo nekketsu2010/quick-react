@@ -8,7 +8,8 @@ export default function MyArticle(props) {
                 <a href={props.url}>
                     {props.title}
                 </a>
-                { props.isNew ? <MyNew /> : null }
+                {/* { props.isNew ? <MyNew /> : null } */}
+                { props.isNew && <MyNew />}
             </dt>
             <dd>
                 {props.description}
