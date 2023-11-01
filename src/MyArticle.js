@@ -9,7 +9,14 @@ export default function MyArticle(props) {
                     {props.title}
                 </a>
                 {/* { props.isNew ? <MyNew /> : null } */}
-                { props.isNew && <MyNew />}
+                {/* { props.isNew && <MyNew />} */}
+
+                {/* 即時関数 */}
+                {(()=>{
+                    if (props.isNew) {
+                        return <MyNew />
+                    }
+                })()}
             </dt>
             <dd>
                 {props.description}
