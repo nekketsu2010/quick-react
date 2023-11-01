@@ -38,12 +38,16 @@ const articles = [
   },
 ];
 
+const list = articles.map((article) => 
+  <MyArticle {...article} key={article.url} />
+);
 root.render(
-  <dl>
-    {articles.map((article, index) => 
-      <MyArticle {...article} key={index} />
-    )}
-  </dl>
+  <dl>{list}</dl>
+  // <dl>
+  //   {articles.map((article, index) => 
+  //     <MyArticle {...article} key={index} />
+  //   )}
+  // </dl>
 );  
 
 // If you want to start measuring performance in your app, pass a function
