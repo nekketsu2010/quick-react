@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import MyTextarea from './MyTextarea';
+import MySelect from './MySelect';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-  <MyTextarea />
+  <MySelect />
 );  
 
 // If you want to start measuring performance in your app, pass a function
