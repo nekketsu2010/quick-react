@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import MyRadio from './MyRadio';
+import MyCheck from './MyCheck';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-  <MyRadio />
+  <MyCheck />
 );  
 
 // If you want to start measuring performance in your app, pass a function
