@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import MyCheck from './MyCheck';
+import MyFile from './MyFile';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-  <MyCheck />
+  <MyFile />
 );  
 
 // If you want to start measuring performance in your app, pass a function
