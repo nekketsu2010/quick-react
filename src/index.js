@@ -7,6 +7,7 @@ import {
   Route
 } from 'react-router-dom';
 // ルーティングで利用するコンポーネントをインポート
+import App from './App';
 import MyTop from './MyTop';
 import MyHello from './MyHello';
 import MyArticle from './MyArticle';
@@ -15,10 +16,13 @@ import NotFound from './NotFound';
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
-      <Route path='' element={<MyTop />} />
-      <Route path='hello' element={<MyHello />} />
-      <Route path='article' element={<MyArticle />} />
-      <Route path='*' element={<NotFound />} />
+      <Route path='/' element={<App />}>
+        {/* a. 規定の子ルート */}
+        <Route path='' element={<MyTop />} />
+        <Route path='hello' element={<MyHello />} />
+        <Route path='article' element={<MyArticle />} />
+        <Route path='*' element={<NotFound />} />
+      </Route>
     </>
   )
 );
