@@ -1,16 +1,28 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import reportWebVitals from './reportWebVitals';
-import MyFile from './MyFile';
-
+import ReactDOM from 'react-dom/client'
+// React Routerに関わる関数をインポート
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  RouterProvider,
+  Route
+} from 'react-router-dom';
+// ルーティングで利用するコンポーネントをインポート
+import MyTop from './MyTop';
+import MyHello from './MyHello';
+import MyArticle from './MyArticle';
+// b. ルート情報を宣言
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <>
+      <Route path='' element={<MyTop />} />
+      <Route path='hello' element={<MyHello />} />
+      <Route path='article' element={<MyArticle />} />
+    </>
+  )
+);
+// a. React Routerを有効化
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-  <MyFile />
+  <RouterProvider router={router} />
 );  
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
