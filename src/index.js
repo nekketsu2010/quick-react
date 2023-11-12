@@ -18,7 +18,7 @@ const router = createBrowserRouter(
     <>
       <Route path='/' element={<App />}>
         {/* a. 規定の子ルート */}
-        <Route path='' element={<MyTop />} />
+        <Route index element={<MyTop />} />
         <Route path='hello' element={<MyHello />} />
         <Route path='article' element={<MyArticle />} />
         <Route path='*' element={<NotFound />} />
