@@ -1,16 +1,20 @@
-import { Link, Outlet } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
+
+// b. スタイルを決定するための関数
+function isCurrent(link) {
+  return link.isActive ? { backgroundColor: 'Yellow' } : undefined;
+}
 
 export default function App() {
   return (
     <>
-      {/* b. ルーティング経由のリンクリストを準備 */}
       <ul>
-        <li><Link to="/">トップ</Link></li>
-        <li><Link to="/hello">Hello</Link></li>
-        <li><Link to="/article">公開記事</Link></li>  
+        {/* a. 現在のページを表すリンクに対してスタイルを適用 */}
+        <li><NavLink style={isCurrent} end to="/">トップ</NavLink></li>
+        <li><NavLink style={isCurrent} to="/hello">Hello</NavLink></li>
+        <li><NavLink style={isCurrent} to="/article">公開記事</NavLink></li>  
       </ul>
       <hr />
-      {/* a. 配下のコンポーネントを表示するための領域 */}
       <Outlet />
     </>
   );  
