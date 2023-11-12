@@ -10,12 +10,17 @@ import {
 import MyTop from './MyTop';
 import MyHello from './MyHello';
 import MyArticle from './MyArticle';
+import NotFound from './NotFound';
 // b. ルート情報を宣言
-const router = createBrowserRouter([
-  {path:'/', element:<MyTop />},
-  {path:'/hello', element:<MyHello />},
-  {path:'/article', element:<MyArticle />},
-]
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <>
+      <Route path='' element={<MyTop />} />
+      <Route path='hello' element={<MyHello />} />
+      <Route path='article' element={<MyArticle />} />
+      <Route path='*' element={<NotFound />} />
+    </>
+  )
 );
 // a. React Routerを有効化
 const root = ReactDOM.createRoot(document.getElementById('root'));
