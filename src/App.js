@@ -1,26 +1,17 @@
-import { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Link, Outlet } from 'react-router-dom';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Reactへようこそ！
-        </a>
-      </header>
-    </div>
+    <>
+      {/* b. ルーティング経由のリンクリストを準備 */}
+      <ul>
+        <li><Link to="/">トップ</Link></li>
+        <li><Link to="/hello">Hello</Link></li>
+        <li><Link to="/article">公開記事</Link></li>  
+      </ul>
+      <hr />
+      {/* a. 配下のコンポーネントを表示するための領域 */}
+      <Outlet />
+    </>
   );  
 }
-
-export default App;
