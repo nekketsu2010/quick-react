@@ -13,6 +13,7 @@ import MyHello from './MyHello';
 import MyArticle from './MyArticle';
 import MySearch from './MySearch';
 import MyQueryArticle from './MyQueryArticle';
+import MyError from './MyError';
 import NotFound from './NotFound';
 // b. ルート情報を宣言
 const router = createBrowserRouter(
@@ -22,7 +23,7 @@ const router = createBrowserRouter(
         {/* a. 規定の子ルート */}
         <Route index element={<MyTop />} />
         <Route path='hello' element={<MyHello />} />
-        <Route path='article/:id' element={<MyArticle />} />
+        <Route path='article/:id' element={<MyArticle />} errorElement={<MyError />} />
         <Route path='article' element={<MyQueryArticle />} />
         <Route path='search/*' element={<MySearch />} />
         <Route path='*' element={<NotFound />} />
