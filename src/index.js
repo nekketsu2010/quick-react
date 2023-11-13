@@ -12,6 +12,7 @@ import MyTop from './MyTop';
 import MyHello from './MyHello';
 import MyArticle from './MyArticle';
 import MySearch from './MySearch';
+import MyQueryArticle from './MyQueryArticle';
 import NotFound from './NotFound';
 // b. ルート情報を宣言
 const router = createBrowserRouter(
@@ -22,6 +23,7 @@ const router = createBrowserRouter(
         <Route index element={<MyTop />} />
         <Route path='hello' element={<MyHello />} />
         <Route path='article/:id' element={<MyArticle />} />
+        <Route path='article' element={<MyQueryArticle />} />
         <Route path='search/*' element={<MySearch />} />
         <Route path='*' element={<NotFound />} />
       </Route>

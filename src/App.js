@@ -15,6 +15,7 @@ export default function App() {
         <li><NavLink className={ isCurrent } to="/hello">Hello</NavLink></li>
         <li><NavLink className={ isCurrent } to="/article/13">公開記事 No.13</NavLink></li>
         <li><NavLink className={ isCurrent } to="/article/108">公開記事 No.108</NavLink></li>  
+        <li><NavLink className={ isCurrent } to="/article/?id=108">公開記事（クエリ対応）</NavLink></li>  
         <li><NavLink className={ isCurrent } to="/search/hello/whats/your/name">検索</NavLink></li>  
       </ul>
       <hr />
