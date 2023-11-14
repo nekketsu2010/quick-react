@@ -13,6 +13,7 @@ import MyHello from './MyHello';
 import MyArticle from './MyArticle';
 import MySearch from './MySearch';
 import MyQueryArticle from './MyQueryArticle';
+import MyBook from './MyBook';
 import MyError from './MyError';
 import NotFound from './NotFound';
 // b. ルート情報を宣言
@@ -26,6 +27,12 @@ const router = createBrowserRouter(
         <Route path='article/:id' element={<MyArticle />} errorElement={<MyError />} />
         <Route path='article' element={<MyQueryArticle />} />
         <Route path='search/*' element={<MySearch />} />
+        <Route path='book/:isbn' element={<MyBook />}
+          loader={
+            ({params}) => {
+              return fetch(`./data/${params.isbn}.json`).then(res => res.json());
+            }
+          }/>
         <Route path='*' element={<NotFound />} />
       </Route>
     </>
