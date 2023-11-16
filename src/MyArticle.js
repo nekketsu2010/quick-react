@@ -1,34 +1,16 @@
-import MyNew from "./MyNew";
+import { useParams } from 'react-router-dom';
 
-export default function MyArticle(props) {
-    function renderIfNew(isNew) {
-        if (isNew) {
-            return <MyNew />
-        }
+export default function MyArticle() {
+    const params = useParams();
+    // id値が範囲外であれば例外をスロー
+    if (params.id <= 0 || params.id >= 1000) {
+        throw new Error('idの値が不正です。');
     }
 
     return (
         /*b. dt, dd要素をくくるダミーの要素*/
         <>
-            <dt>
-                <a href={props.url}>
-                    {props.title}
-                </a>
-                {/* { props.isNew ? <MyNew /> : null } */}
-                {/* { props.isNew && <MyNew />} */}
-
-                {/* 即時関数 */}
-                {/* {(()=>{
-                    if (props.isNew) {
-                        return <MyNew />
-                    }
-                })()} */}
-
-                {renderIfNew(props.isNew)}
-            </dt>
-            <dd>
-                {props.description}
-            </dd>
+            <div>No.{params.id}の記事情報です！</div>
         </>
     );
 }
