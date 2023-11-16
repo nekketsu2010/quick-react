@@ -6,8 +6,10 @@ export default function MyState(props) {
 
     // コンポーネントの（再）描画時に実行
     useEffect(() => {
-        console.log(`${count}回、クリックされました。`);
-    }, [count]);
+        setInterval(() => {
+            setCount(c => c + 1);
+        }, 1000);
+    }, []);
 
     // c. count値をインクリメント（イベントハンドラー）
     function increment() {
