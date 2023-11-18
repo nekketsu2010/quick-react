@@ -1,11 +1,11 @@
 import './App.css';
-import MyReducer from './MyReducer';
+import MyReducerEx from './MyReducerEx';
 
 
 export default function App() {
   return (
     <>
-    <MyReducer />
+    <MyReducerEx />
     </>
   );  
 }
