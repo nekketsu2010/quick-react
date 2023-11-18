@@ -6,9 +6,13 @@ export default function MyState(props) {
 
     // コンポーネントの（再）描画時に実行
     useEffect(() => {
-        setInterval(() => {
+        const t = setInterval(() => {
             setCount(c => c + 1);
         }, 1000);
+
+        return () => {
+            clearInterval(t);
+        };
     }, []);
 
     // c. count値をインクリメント（イベントハンドラー）
