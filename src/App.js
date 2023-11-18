@@ -1,10 +1,11 @@
 import './App.css';
-import MyState from './MyState';
+import MyReducer from './MyReducer';
+
 
 export default function App() {
   return (
     <>
-    <MyState />
+    <MyReducer />
     </>
   );  
 }
