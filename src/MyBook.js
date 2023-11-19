@@ -1,12 +1,14 @@
-import { useLoaderData } from 'react-router-dom';
+import MyCover from './MyCover';
 
-export default function MyBook() {
-    const book = useLoaderData();
+export default function MyBook(props) {
     return(
-        <ul>
-            <li>{book.title}</li>
-            <li>{book.price}円</li>
-            <li>{book.publisher}</li>
+        <div>
+            <MyCover isbn={props.info.isbn} />
+            <ul>
+            <li>{props.info.title}</li>
+            <li>{props.info.price}円</li>
+            <li>{props.info.publisher}</li>
         </ul>
+        </div>
     );
 }
