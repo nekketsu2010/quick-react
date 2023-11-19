@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { MyAppContext } from "./MyCount1";
+import { MyAppContext } from "./MyAppContext";
 
 export default function MyCount3() {
     // a. コンテキスト値を取得
