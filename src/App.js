@@ -1,11 +1,10 @@
 import './App.css';
-import MyReducerEx from './MyReducerEx';
-
+import MyCount1 from './MyCount1';
 
 export default function App() {
   return (
     <>
-    <MyReducerEx />
+    <MyCount1 />
     </>
   );  
 }
