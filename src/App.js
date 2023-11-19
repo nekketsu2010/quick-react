@@ -1,10 +1,10 @@
 import './App.css';
-import MyCount1 from './MyCount1';
+import MyCustom from './MyCustom';
 
 export default function App() {
   return (
     <>
-    <MyCount1 />
+    <MyCustom />
     </>
   );  
 }
